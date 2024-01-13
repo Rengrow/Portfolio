@@ -1,111 +1,106 @@
 /**
-* Template Name: MyPortfolio - v4.3.0
+* Template Name: MyPortfolio - v2.1.0
 * Template URL: https://bootstrapmade.com/myportfolio-bootstrap-portfolio-website-template/
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
-(function() {
+(function($) {
   "use strict";
 
-  /**
-   * Easy selector helper function
-   */
-  const select = (el, all = false) => {
-    el = el.trim()
-    if (all) {
-      return [...document.querySelectorAll(el)]
-    } else {
-      return document.querySelector(el)
-    }
+  console.log("Debug!!");
+
+  var burgerMenu = function() {
+    $('.burger').click(function(e) {
+      $(window).scrollTop(0);
+      if (!$('.burger').hasClass('active'))
+        $('.burger').addClass('active');
+      else
+        $('.burger').removeClass('active');
+    });
   }
+  burgerMenu();
 
-  /**
-   * Easy event listener function
-   */
-  const on = (type, el, listener, all = false) => {
-    let selectEl = select(el, all)
-    if (selectEl) {
-      if (all) {
-        selectEl.forEach(e => e.addEventListener(type, listener))
-      } else {
-        selectEl.addEventListener(type, listener)
-      }
-    }
-  }
+  var siteIstotope = function() {
+    var $container = $('#portfolio-grid').isotope({
+      itemSelector: '.item',
+      isFitWidth: true
+    });
 
-  /**
-   * Easy on scroll event listener 
-   */
-  const onscroll = (el, listener) => {
-    el.addEventListener('scroll', listener)
-  }
-
-  /**
-   * burgerMenu
-   */
-  const burgerMenu = select('.burger')
-  on('click', '.burger', function(e) {
-    burgerMenu.classList.toggle('active');
-  })
-
-  /**
-   * Porfolio isotope and filter
-   */
-  window.addEventListener('load', () => {
-    let portfolioContainer = select('#portfolio-grid');
-    if (portfolioContainer) {
-      let portfolioIsotope = new Isotope(portfolioContainer, {
-        itemSelector: '.item',
+    $(window).resize(function() {
+      $container.isotope({
+        columnWidth: '.col-sm-4'
       });
+    });
 
-      let portfolioFilters = select('#filters a', true);
+    $container.isotope({
+      filter: '*'
+    });
 
-      on('click', '#filters a', function(e) {
-        e.preventDefault();
-        portfolioFilters.forEach(function(el) {
-          el.classList.remove('active');
-        });
-        this.classList.add('active');
-
-        portfolioIsotope.arrange({
-          filter: this.getAttribute('data-filter')
-        });
-        portfolioIsotope.on('arrangeComplete', function() {
-          AOS.refresh()
-        });
-      }, true);
-    }
-
+    $('#filters').on('click', 'a', function(e) {
+      e.preventDefault();
+      var filterValue = $(this).attr('data-filter');
+      $container.isotope({
+        filter: filterValue
+      });
+      $('#filters a').removeClass('active');
+      $(this).addClass('active');
+    });
+  }
+  $(window).on('load', function() {
+    siteIstotope();
   });
 
-  /**
-   * Testimonials slider
-   */
-  new Swiper('.testimonials-slider', {
-    speed: 600,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
-    slidesPerView: 'auto',
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    }
-  });
+  let mainSlider = function() {
+    $('#slider').owlCarousel({
+      center: true,
+      items: 1,
+      loop: true,
+      margin: 0,
+      autoplay: true,
+      smartSpeed: 1000,
+      autoplayTimeout: 3500
+    });
+  };
+  mainSlider();
 
-  /**
-   * Animation on scroll
-   */
-  window.addEventListener('load', () => {
+  var siteOwlCarousel = function() {
+    $('.testimonial-carousel').owlCarousel({
+      center: true,
+      items: 1,
+      loop: true,
+      margin: 0,
+      autoplay: true,
+      smartSpeed: 1000,
+    });
+  };
+  siteOwlCarousel();
+
+  $(window).on('load', function() {
     AOS.init({
+      easing: 'ease',
       duration: 1000,
-      easing: 'ease-in-out',
-      once: true,
-      mirror: false
-    })
+      once: true
+    });
   });
 
-})()
+  $(window).on('scroll', function() {
+    var scrollTop = $(this).scrollTop();
+    console.log(scrollTop);
+
+    if(scrollTop == 0) 
+    {
+      //hide button
+      $('.back-to-top').fadeOut('fast');
+    } 
+    else if( $('.back-to-top').is(':hidden')) 
+    {
+       // show button
+      $('.back-to-top').fadeIn('fast');
+    }
+  });
+
+  setTimeout(function(){ 
+    $('#spinner').fadeOut();
+  }, 2000);
+
+})(jQuery);

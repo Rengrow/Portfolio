@@ -1,5 +1,5 @@
 /**
-* Template Name: MyPortfolio - v4.3.0
+* Template Name: MyPortfolio - v2.1.0
 * Template URL: https://bootstrapmade.com/myportfolio-bootstrap-portfolio-website-template/
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
@@ -8,14 +8,17 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  font-family: "Inconsolata", monospace;
+  font-family: 'Oswald', sans-serif; font-weight: 300;
   color: #0d1e2d;
 }
 
 a {
   color: #777;
-  text-decoration: none;
 }
 
 a:hover {
@@ -23,7 +26,7 @@ a:hover {
 }
 
 h1, h2, h3, h4, h5, h6, .font-heading {
-  font-family: "Raleway", sans-serif;
+  font-family: 'Staatliches', cursive;
 }
 
 .section {
@@ -31,7 +34,6 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 }
 
 .filters a {
-  text-decoration: none;
   color: #000;
   display: inline-block;
   padding-left: 10px;
@@ -86,10 +88,14 @@ h1, h2, h3, h4, h5, h6, .font-heading {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.6);
   visibility: hidden;
   opacity: 0;
   transition: .3s all ease-in-out;
+}
+
+.item .item-wrap.light:after {
+  background: rgba(0, 0, 0, 0.3);
 }
 
 .item .item-wrap img {
@@ -195,20 +201,32 @@ h1, h2, h3, h4, h5, h6, .font-heading {
   background: #000;
 }
 
-.testimonials-slider .swiper-pagination {
-  margin-top: -60px;
-  position: relative;
+.testimonial-carousel .owl-dots {
+  position: absolute;
+  bottom: 40px;
+  width: 100%;
+  text-align: center;
 }
 
-.testimonials-slider .swiper-pagination .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  background-color: rgba(13, 30, 45, 0.3);
-  opacity: 1;
+.testimonial-carousel .owl-dots .owl-dot {
+  display: inline-block;
 }
 
-.testimonials-slider .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: rgba(13, 30, 45, 0.6);
+.testimonial-carousel .owl-dots .owl-dot > span {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  background-color: #cbd3da;
+  border-radius: 50%;
+  margin: 5px;
+}
+
+.testimonial-carousel .owl-dots .owl-dot.active {
+  outline: none;
+}
+
+.testimonial-carousel .owl-dots .owl-dot.active > span {
+  background: #0d1e2d;
 }
 
 .sticky-content {
@@ -254,20 +272,24 @@ h1, h2, h3, h4, h5, h6, .font-heading {
   border-radius: 0;
 }
 
+.bullet-points {
+  display: flex;
+  flex-direction: column;
+}
+
 .custom-progress .progress-bar {
   background: #000;
 }
 
-/* Services */
-.services i {
-  font-size: 40px;
-}
-
-.services h4 {
-  padding-top: 10px;
-}
-
 /* Contact Form */
+.php-email-form .validate {
+  display: none;
+  color: red;
+  margin: 0 0 15px 0;
+  font-weight: 400;
+  font-size: 13px;
+}
+
 .php-email-form .error-message {
   display: none;
   color: #fff;
@@ -379,7 +401,7 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 
 /* Custom Navbar */
 .custom-navbar {
-  padding-top: 50px;
+  padding-top: 35px;
   width: 100%;
 }
 
@@ -464,15 +486,18 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 # Footer
 --------------------------------------------------------------*/
 .footer {
-  padding: 0 0 4rem 0;
+  background-color: black;
+  padding: 30px 0 30px 0;
+  color: #fff;
 }
 
 .footer a {
-  color: #000;
+  color: #fff;
 }
 
 .social a {
   display: inline-block;
+  margin-right: 8px;
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -482,14 +507,89 @@ h1, h2, h3, h4, h5, h6, .font-heading {
   color: #0d1e2d;
 }
 
+.owl-nav {
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+
 .social a span {
   display: inline-block;
   left: 50%;
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
+  font-size: 25px ;
 }
 
 .social a:hover {
   color: #000;
+}
+
+#menu-principal a {
+  margin-left: 20px;
+  font-size: 18px;
+  color: black;
+  transition: 0.2s all;
+}
+
+#menu-principal a:hover {
+  color: #cbd3da;
+  text-decoration: none;
+}
+
+#slider div {
+  width: 100%;
+}
+
+#slider img {
+  max-width: 100%;
+  height: 365px;
+}
+
+.rounded-image {
+  border-radius: 100%; height: 250px; width: 250px;
+}
+
+.back-to-top {
+  position: fixed;
+  right: 30px;
+  bottom: 10px;
+  font-size: 40px;
+  background-color: black;
+  padding: 3px 13px;
+  border-radius: 100%;
+  transition: 0.1s all;
+  display: none;
+}
+
+.card-socials a {
+  font-size: 18px;
+}
+
+.card-socials a:hover {
+  text-decoration: none;
+}
+
+.back-to-top:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+#spinner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+#spinner > div {
+  width: 100px;
+  height: 100px;
 }
