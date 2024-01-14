@@ -17,6 +17,15 @@ body {
   color: #0d1e2d;
 }
 
+.imageContainer {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.bullet-points + h5 {
+  margin-top: .5rem;;
+}
+
 a {
   color: #777;
 }
@@ -27,6 +36,16 @@ a:hover {
 
 h1, h2, h3, h4, h5, h6, .font-heading {
   font-family: 'Staatliches', cursive;
+}
+
+#individualProject p {
+  font-size: 1.15rem;
+}
+
+#individualProject blockquote {
+  padding-left: 1.5rem;
+  font-size: 1.2rem;
+  font-style: italic;
 }
 
 .section {
