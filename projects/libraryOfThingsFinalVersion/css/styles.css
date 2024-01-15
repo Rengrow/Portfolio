@@ -1,0 +1,305 @@
+ body {
+	font-family: "Montserrat", sans-serif;
+	margin: 0px;
+	padding: 0px;
+	font-size: 12px;
+	color: #000000;
+}
+
+h2 {
+	margin: 0;
+	padding-top: 20px;
+}
+
+div > h2 {
+	max-width: 300px;
+	margin:0 auto;
+}
+
+/* Header */
+header {  
+	top: 0;
+	width: 100%;
+	z-index: 10;
+	background-color: #24252A;
+}
+
+nav{
+	display: none;
+}
+
+.titleLogo, .companyName {
+	display: flex;
+	align-items: center;
+	height: 50px;
+	background-color: #5EDB7B;
+}
+
+.titleLogo {
+	justify-content: space-between
+}
+
+.titleLogo .material-symbols-outlined {
+	font-size: 48px;
+	padding-right: 10px;
+}
+
+.companyName h1 {
+	font-size: 20px;
+	font-weight: 600;
+}
+
+[class^="logo"] {  
+	width: auto;
+	margin: 0px 10px;
+}
+
+.logoMobile{
+	display:block;
+}
+
+.logoDesktop{
+	display:none;
+}
+
+nav ul {
+	display: flex;
+	align-self: center;
+	flex-direction: row;
+	justify-content: space-around;
+	margin:0;
+	width: 100%;
+	padding-left: 0;
+}
+
+nav ul li {
+	display: flex;
+	align-items: center;
+	list-style: none;
+	padding: 0px 20px;
+	border-radius: 300px;
+	height: 50px;
+}
+
+nav ul li:hover {
+	background-color: #5EDB7B;
+}
+
+nav ul li:hover a {
+	color: #000000;
+}
+
+nav li a {
+	color: #FFFFFF;
+	text-align: center;
+	text-decoration: none;
+	font-size: 28px;
+}
+
+nav ul li.activo {
+	background-color: #5EDB7B;
+}
+
+nav ul li.activo a {
+	color: #000000;
+}
+
+/* Content */
+main, section{
+	width: 100%;
+	margin: 0 auto;
+}
+
+[class$="Container"]{
+	max-width: 300px;
+	margin:0 auto;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.quote {
+	font-family: "Patrick Hand";
+	background-color: #9E6A29;
+	color: #FFFFFF;
+	margin-right: 0px;
+	margin-bottom: 5px;
+	border-radius: 10px;
+	padding: 20px;
+	display: flex;
+	align-items: center;
+	width: auto;
+}
+
+.button {
+	border: solid 1px #9E6A29;
+	background-color: #9E6A29;
+	border-radius: 10px;
+	width: 200px;
+	height: 35px;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	margin: 20px 0px;
+}
+
+.button a {
+	color: #FFFFFF;
+	font-size: 12px;
+}
+
+.button:hover {
+	background-color: #F1F4F5;
+}
+
+.button:hover a {
+	color: #9E6A29;
+}
+
+/* Footer */
+#footer {
+	color: #000000;
+	font-size: 10px;
+	height: 70px;
+	background-color: #5EDB7B;
+}
+
+.footerContainer {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	text-align: center;
+	height: 100%;
+	align-items: center;
+}
+
+#footer .directions {
+	text-align: left;
+	width: 60%;
+}
+
+#footer .directions p {
+	margin:0;
+}
+
+#footer .directions a {
+	color: #000000;
+}
+
+#footer .directions a:hover {
+	color: #FFFFFF;
+}
+
+#footer .social {
+	 display: flex;
+	 flex-direction: row;
+	 justify-content: space-between;
+	 align-self: center;
+	 width: 30%;
+}
+
+#footer .social img {
+	 width: 20px;
+	 height: 20px;
+	 padding-bottom: 10px;
+}
+
+@media screen and (min-width: 770px) and (max-width: 1200px) {
+	.quote {
+		margin-right: 20px;
+	}
+}
+
+@media screen and (min-width: 770px) {
+	body {
+		 font-size: 16px;
+	}
+	 
+	div > h2 {
+		 font-size: 32px;
+		 max-width: 1260px;
+		 margin:0 auto;
+		 margin-bottom: 10px;
+	}
+
+	.titleLogo, .companyName {
+		height: 110px;
+	}
+
+	.companyName {
+		padding-left: 270px;
+	}
+
+	.companyName h1 {
+		font-size: 48px;
+	}
+
+	.titleLogo .material-symbols-outlined {
+		font-size: 85px;
+		padding-right: 100px;
+	}
+
+	.logoMobile {
+		display:none;
+	}
+
+	.logoDesktop {
+		display:block;
+	}
+
+	nav {
+		max-width: 1260px;
+		margin:0 auto; 
+		text-align: center;
+		height: 70px;
+
+		display: flex;
+		overflow: hidden;
+		
+		justify-content: center;
+		background-color: #24252A;
+	}
+
+	[class$="Container"]{
+		max-width: 1260px;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.quote {
+		font-size: 20px;
+		width: 466px;
+		height: auto;
+		padding: 20px 75px;
+		margin-top: 0px;
+		margin-bottom: 0px;
+	}
+
+	.button {
+		height: 50px;
+		width: 250px;
+	}
+
+	.button a {
+		font-size: 16px;
+	}
+
+	#footer {
+		height: 110px;
+		font-size: 16px;
+	}
+
+	#footer .social {
+		width: 20%;
+	}
+
+	#footer .social img {
+		width: 50px;
+		height: 50px;
+		padding-bottom: 10px;
+	}
+}

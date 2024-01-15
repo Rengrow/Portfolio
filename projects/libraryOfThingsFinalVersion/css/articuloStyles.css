@@ -1,0 +1,285 @@
+main {
+  background: rgba(158, 106, 41, 0.1);
+}
+
+h3 {
+	font-size: 14px;
+}
+
+/* Article */
+
+[class$="Images"] a {
+	text-decoration: none;
+}
+
+.articleImages {
+	display: flex;
+	flex-direction: column;
+    align-items: center;
+	width: auto;
+}
+
+.articleImages img {
+	width: 300px;
+	height: auto;
+	margin: 10px 0px;
+	border-radius: 5px;
+}
+
+.carrousselImages {
+	width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.carrousselImages img {
+	width: 82px;
+}
+
+.articlePanel {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+}
+
+.description {
+	margin-top: 10px;
+}
+
+.description p {
+	font-size: 10px;
+	margin: 0px;
+}
+
+.label {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	border: solid 1px #5EDB7B;
+	background-color: #5EDB7B;
+	border-radius: 25px;
+	width: 50px;
+	height: 20px;
+}
+
+.label p {
+	font-size: 8px;
+}
+
+.labelCategories {
+	display: flex;
+	flex-direction: row;
+    justify-content: space-around;
+}
+
+.labelCategories .label {
+	width: 55px;
+}
+
+.reserve {
+    display: flex;
+    align-items: center;
+}
+
+.button {
+	width: 92px;
+	height: 40px;
+	background-color: #5EDB7B;
+	border-color: #5EDB7B;
+}
+
+/* Calendar */
+#Calendar {
+	border-collapse: collapse;
+	width: 100%;
+	font-size: 8px;
+	margin: 10px 0px;
+}  
+
+.monthNoCol {
+	width: 3%
+}
+
+.monthTxtCol {
+	width: 10%;
+}
+
+#Calendar th {
+	font-weight: normal;
+}
+
+#Calendar tr {
+	height: 10px;
+}
+
+/* Altura del cuadro de los días */
+#Calendar tr:nth-child(even) {
+	vertical-align: top;
+	height: 18px;
+}
+
+/* Altura de los cuadros de evento */
+#Calendar tr:nth-child(2) {
+	height: 18px;
+}
+
+/* Bordeado del cabezal del Lunes */
+#Calendar tr:first-child th:first-child {
+	border-top-left-radius: 10px;
+}
+
+/* Bordeado del cabezal del Domingo */
+#Calendar tr:first-child th:last-child {
+	border-top-right-radius: 10px;
+}
+
+/* Línea derecha del borde de la tabla */
+#Calendar tr:not(:first-child) td:last-child {
+	border-right: 1px solid #5EDB7B;
+}
+
+/* Línea inferior del borde de la tabla */
+#Calendar tr:last-child td {
+	border-bottom: 1px solid #5EDB7B;	
+}
+
+.CabezalDiaSemana{
+	color: #000000;
+	text-align:center;
+	border-left: 1px solid white;
+	background-color:#5EDB7B;
+}
+
+.DiaSemanaNumericoFinDeSemana {
+	color: #24252A;
+	font-weight: 700;
+	text-align: center;
+	border-top: 1px solid #5EDB7B;
+	border-left: 1px solid #5EDB7B;
+	background-color: #F9F9E1;
+}
+
+.DiaSemanaNoNumericoFinDeSemana {
+	text-align: left;
+	border-top: 1px solid #5EDB7B;
+	background-color: #F9F9E1;
+}
+
+.DiaSemanaNumerico {
+	color: #24252A;
+	font-weight: 700;
+	text-align: center;
+	border-top: 1px solid #5EDB7B;
+	border-left: 1px solid #5EDB7B;
+	background-color: #FFFFFF;
+}
+
+.DiaSemanaNoNumerico {
+	text-align: left;
+	border-top: 1px solid #5EDB7B;
+	background-color: #FFFFFF;
+}
+
+.DiaSemanaNoNumericoSinNumero {
+	border-top:1px solid #5EDB7B;
+	background:#D9D9D9;
+}
+
+.DiaSemanaNumericoSinNumero {
+	border-top: 1px solid #5EDB7B;
+	border-left: 1px solid #5EDB7B;
+	background-color: #D9D9D9;
+}
+
+.EventoSemanaSinNumero {
+	border-left: 1px solid #5EDB7B;
+	background-color: #D9D9D9;
+}
+
+.EventoSemana {
+	border-left: 1px solid #5EDB7B;
+	background-color: #FFFFFF;
+}
+
+.EventoSemanaFinDeSemana {
+	border-left: 1px solid #5EDB7B;
+	background-color: #F9F9E1;
+}
+
+
+
+@media screen and (min-width: 770px) {
+	h3 {
+		font-size: 24px;
+	}
+
+	.articleImages {
+		width: 616px;
+	}
+	
+	.carrousselImages {
+		justify-content: space-evenly;
+	}
+	
+	.articlePanel {
+		width: 616px;
+		display: flex;
+		flex-direction: column;
+	}
+	
+	.description {
+		width: 100%;
+	}
+	
+	.description p {
+		font-size: 16px;
+	}
+	
+	.label {
+		width: 70px;
+		height: 25px;
+	}
+	
+	.label p {
+		font-size: 12px;
+	}
+	
+	.labelCategories .label {
+		width: 80px;
+		height: 30px;
+	}
+	
+	.articleDescription {
+		width: 70%;
+	}
+	
+	.reserve {
+		width: 70%;
+		justify-content: center;
+	}
+	
+	#Calendar {
+		font-size: 14px;
+	}
+	
+	#Calendar tr {
+		height: 20px;
+	}
+
+	/* Altura del cuadro de los días */
+	#Calendar tr:nth-child(even) {
+		height: 25px;
+	}
+
+	/* Altura de los cabezales */
+	#Calendar tr:first-child {
+		height: 30px;
+	}
+
+	/* Altura de los cuadros de evento */
+	#Calendar tr:nth-child(2) {
+		height: 20px;
+	}
+}

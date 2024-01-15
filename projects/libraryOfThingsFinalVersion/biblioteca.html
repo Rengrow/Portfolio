@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <title>Biblioteca - Casa de las cosas</title>
+  <link rel='icon' href='images/favicon.png' type='image/x-icon'/>
+  
+  <meta name="author" content="Rafael López"/>
+  <meta name="description" content="Práctica: Una web completa - Biblioteca " />
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Patrick+Hand"/>
+  
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/bibliotecaStyles.css">
+</head>
+	<body>  
+		<header>
+			<div class="titleLogo">
+				<div class="companyName">
+					<a href="index.html">
+						<img class="logoDesktop" src= "images/logo.png" alt="WebDesignLogo">
+						<img class="logoMobile" src= "images/hamburguer.png" alt="HamburguerIcon">
+					</a>
+					<h1>Casa de las cosas</h1>
+				</div>
+				<div>
+					<span class="material-symbols-outlined">
+						account_circle
+					</span>
+				</div>
+			</div>
+			<nav>
+				<ul>
+					<li class="activo"><a href="biblioteca.html">Biblioteca</a></li>
+					<li><a href="voluntariado.html">Voluntariado</a></li>
+					<li><a href="#">Saber más</a></li>
+					<li><a href="#">Ayuda</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main>	
+			
+			<div class="gridContainer">
+				<div id="lateralPanel">
+					<form>
+						<section>
+							<h3>Disponibilidad</h3>
+							<p>
+								<input type="checkbox" id="available" name="available">
+								<label for="available">
+									<span>En stock ahora</span>
+								</label>
+							</p>
+						</section>					
+						<section>
+							<h3>Categoría</h3>
+							<p>
+								<input type="checkbox" id="sports" name="sports">
+								<label for="sports">
+									<span>Deportes</span>
+								</label>
+							</p>
+							<p>
+								<input type="checkbox" id="toys" name="toys">
+								<label for="toys">
+									<span>Juguetes</span>
+								</label>
+							</p>
+							<p>
+								<input type="checkbox" id="garden" name="garden">
+								<label for="garden">
+									<span>Jardín</span>
+								</label>
+							</p>
+							<p>
+								<input type="checkbox" id="kitchen" name="kitchen">
+								<label for="kitchen">
+									<span>Cocina</span>
+								</label>
+							</p>
+							<p>
+								<input type="checkbox" id="tools" name="tools">
+								<label for="tools">
+									<span>Herramientas</span>
+								</label>
+							</p>
+							<p>
+								<input type="checkbox" id="videogames" name="videogames">
+								<label for="videogames">
+									<span>Videojuegos</span>
+								</label>
+							</p>
+						</section>
+					</form>
+				</div>
+				
+				<div id="centralPanel">
+					<form id="searchBar">
+						<div>
+							<label for="inputSearch">
+								<span>-</span>
+							</label>
+							<input type="text" id="inputSearch" class="icon" name="inputSearch">
+						</div>
+					</form>
+					
+					<div class="sort">
+						<span class="material-symbols-outlined">
+							sort
+						</span>
+					</div>
+					
+					<div id="items">
+						<div class="article">
+							<a href="articulo.html">
+							<img src="images/mando1.png" alt="Mando PS4 Blanco Principal">
+							<hr>
+							<div class="articleDescription">
+								<h4>Mando PS4 Blanco</h4>
+								<div class="description">
+									<p>Mando PS4 Blanco inalámbrico DUALSHOCK 4 blanco original</p>
+									<div class="label">
+										<p>Disponible</p>
+									</div>
+								</div>
+							</div>
+							</a>
+						</div>
+						
+						<div class="article">
+							<a href="articulo.html">
+							<img src="images/microfonos.png" alt="Microfonos Singstar">
+							<hr>
+							<div class="articleDescription">
+								<h4>Microfonos PS2</h4>
+								<div class="description">
+									<p>Microfonos Singstar Originales USB</p>
+									<div class="label">
+										<p>Disponible</p>
+									</div>
+								</div>
+							</div>
+							</a>
+						</div>
+						
+						<div class="article">
+							<a href="articulo.html">
+							<img src="images/ps1.png" alt="Playstation 1">
+							<hr>
+							<div class="articleDescription">
+								<h4>Playstation 1</h4>
+								<div class="description">
+									<p>PS1 original con cables y mando</p>
+									<div class="label">
+										<p>Disponible</p>
+									</div>
+								</div>
+							</div>
+							</a>
+						</div>
+						
+						<div class="article">
+							<a href="articulo.html">
+							<img src="images/wii.png" alt="Wii con Wii Fit">
+							<hr>
+							<div class="articleDescription">
+								<h4>Wii Fit Balance Board</h4>
+								<div class="description">
+									<p>Balance board, mando, Wii y cables</p>
+									<div class="label">
+										<p>Disponible</p>
+									</div>
+								</div>
+							</div>
+							</a>
+						</div>
+						
+						<div class="article">
+							<a href="articulo.html">
+							<img src="images/switch.png" alt="Nintendo Switch">
+							<hr>
+							<div class="articleDescription">
+								<h4>Nintendo Switch</h4>
+								<div class="description">
+									<p>Switch, micro sd 128gb, cables originales y dock</p>
+									<div class="label">
+										<p>Disponible</p>
+									</div>
+								</div>
+							</div>
+							</a>
+						</div>
+						
+						<div class="article">
+							<a href="articulo.html">
+							<img src="images/nes.png" alt="Consola NES">
+							<hr>
+							<div class="articleDescription">
+								<h4>Consola NES</h4>
+								<div class="description">
+									<p>Consola NES, dos mandos, transformador y cables</p>
+									<div class="label">
+										<p>Disponible</p>
+									</div>
+								</div>
+							</div>
+							</a>
+						</div>
+						
+						<div class="article">
+							<a href="articulo.html">
+							<img src="images/vr.png" alt="Gafas VR">
+							<hr>
+							<div class="articleDescription">
+								<h4>Gafas realidad virtual</h4>
+								<div class="description">
+									<p>Gafas Woxter Neo VR1 White</p>
+									<div class="label">
+										<p>Disponible</p>
+									</div>
+								</div>
+							</div>
+							</a>
+						</div>
+					
+						<div class="article">
+							<a href="articulo.html">
+							<img src="images/psp.png" alt="PSP FAT">
+							<hr>
+							<div class="articleDescription">
+								<h4>Sony PSP FAT 1004</h4>
+								<div class="description">
+									<p>PSP, cargador y memory card 64gb</p>
+									<div class="label">
+										<p>Disponible</p>
+									</div>
+								</div>
+							</div>
+							</a>
+						</div>
+						
+						<div class="article">
+							<a href="articulo.html">
+							<img src="images/xbox.png" alt="XBOX 360">
+							<hr>
+							<div class="articleDescription">
+								<h4>Xbox 360 slim 250gb</h4>
+								<div class="description">
+									<p>Xbox, mando, kinect, HDMI y transformador</p>
+									<div class="label">
+										<p>Disponible</p>
+									</div>
+								</div>
+							</div>
+							</a>
+						</div>
+					</div>	
+					<div class="pageContainer">
+						<div class="pageLabel">
+							<a href="#">
+								<span class="material-symbols-outlined">
+									chevron_left
+								</span>
+							</a>
+						</div>
+						<div class="pageLabel">
+							<a href="#">
+								<p>1</p>
+							</a>
+						</div>
+						<div class="pageLabel">
+							<a href="#">
+								<span class="material-symbols-outlined">
+									chevron_right
+								</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</main> 
+
+		<footer id="footer">
+		<div class="footerContainer">
+			<div class="directions">
+				<p><em>Casa de las cosas, Av. de la Reina Victoria, 19</em></p>
+				<p>email: <a href="contact@casacosas.com">contact@casacosas.com</a></p>
+				<p>Teléfono: +34 767 536 222</p>
+			</div>
+			
+			<div class="social">
+				<a href="#"><img src="images/fb.png" alt="fb"></a>
+				<a href="#"><img src="images/twitter.png" alt="twitter"></a>
+				<a href="#"><img src="images/instagram.png" alt="instagram"></a>
+			</div>
+		</div>
+		</footer>	
+  </body>
+</html>

@@ -1,0 +1,90 @@
+main img {
+	width: 300px;
+	height: auto;
+	margin: 10px 0px;
+}
+
+#presentation {
+	background: rgba(158, 106, 41, 0.2);
+}
+
+/* Volunteer Form */
+form {
+	width: 100%
+}
+
+#volunteerForm {
+	background: rgba(158, 106, 41, 0.1);
+	width: 100%;
+}
+
+#volunteerForm input[type="text"], input[type="email"], fieldset, textarea {
+  width: 90%;
+  box-sizing: border-box;
+  border: 2px solid #5EDB7B;
+  border-radius: 4px;
+  background-color: #F1F4F5;
+  resize: none;
+  
+  padding: 12px 20px;
+  margin-left: 5%;
+}
+
+#volunteerForm div p {
+  margin: 5px 0px;
+}
+
+#volunteerForm input:focus, #volunteerForm textarea:focus {
+  background-color: rgba(94, 219, 123, 0.2);
+  border: 2px solid #5EDB7B;
+}
+
+#volunteerForm textarea {
+  height: 100px;
+}
+
+#volunteerForm a {
+  color: #0D7E27;
+}
+
+#volunteerForm a:hover {
+  color: #915D1C;
+}
+
+#volunteerForm .submit {
+	display: flex;
+	align-items: center;
+    justify-content: center;
+}
+
+#volunteerForm input[type="submit"] {
+	border: solid 1px #5EDB7B;
+	background-color: #5EDB7B;
+	border-radius: 5px;
+	width: 50px;
+	height: 26px;	
+	margin: 20px 0px;
+	font-size: 12px;
+}
+
+#volunteerForm input[type="submit"]:hover {
+  background-color: #F1F4F5;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 770px) {
+	main img {
+		width: 616px;
+		height: auto;
+	}
+	
+	.presentationContainer {
+		flex-direction: row-reverse;
+	}
+	
+	#volunteerForm input[type="submit"] {
+		width: 132px;
+		height: 55px;
+		font-size: 14px;
+	}
+}

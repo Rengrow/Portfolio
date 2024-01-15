@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+
+	<head>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	  
+	  <title>Voluntariado - Casa de las cosas</title>
+	  <link rel='icon' href='images/favicon.png' type='image/x-icon'/>
+	  
+	  <meta name="author" content="Rafael López"/>
+	  <meta name="description" content="Práctica: Una web completa - Voluntariado " />
+
+	  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+	  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"/>
+	  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat"/>
+	  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Patrick+Hand"/>
+	  
+	  <link rel="stylesheet" href="css/styles.css">
+	  <link rel="stylesheet" href="css/voluntariadoStyles.css">
+	</head>
+	<body>
+	
+		<header>
+			<div class="titleLogo">
+				<div class="companyName">
+					<a href="index.html">
+						<img class="logoDesktop" src= "images/logo.png" alt="WebDesignLogo">
+						<img class="logoMobile" src= "images/hamburguer.png" alt="HamburguerIcon">
+					</a>
+					<h1>Casa de las cosas</h1>
+				</div>
+				<div>
+					<span class="material-symbols-outlined">
+						account_circle
+					</span>
+				</div>
+			</div>
+			<nav>
+				<ul>
+					<li><a href="biblioteca.html">Biblioteca</a></li>
+					<li class="activo"><a href="voluntariado.html">Voluntariado</a></li>
+					<li><a href="#">Saber más</a></li>
+					<li><a href="#">Ayuda</a></li>
+				</ul>
+			</nav>
+		</header>
+		
+		<main>	
+			
+			<div id="presentation">
+				<h2>Voluntariado</h2>
+				<div class="presentationContainer">
+					<img src="images/voluntariado.jpeg" alt="Voluntariado">
+					<div class="quote">
+						<p>¿Interesado en ser voluntario? Necesitamos personas con diversas habilidades para ayudar a configurar y administrar la biblioteca. Hay una variedad de trabajos con los que agradeceríamos ayuda y siempre estamos buscando miembros entusiastas de la comunidad para ayudar. Si quieres ser voluntario con nosotros, completa el siguiente formulario y pronto nos pondremos en contacto contigo.</p>
+					</div>
+				</div>
+			</div>
+			
+			<div id="volunteerForm">
+				<h2>Aplica al voluntariado</h2>
+				<div class="volunteerFormContainer">
+					<form>
+						<div>
+							<p>
+								<label for="name">
+									<span>Tu nombre:</span>
+								</label>
+								<input type="text" id="name" name="name" required>
+								<strong><abbr title="required">*</abbr></strong>
+							</p>
+							<p>
+								<label for="surname">
+									<span>Tus apellidos:</span>
+								</label>
+								<input type="text" id="surname" name="surname" required>
+								<strong><abbr title="required">*</abbr></strong>
+							</p>
+							<p>
+								<label for="phone">
+									<span>Tu teléfono:</span>
+								</label>
+								<input type="text" id="phone" name="phone">
+							</p>
+							
+							<p>
+								<label for="email">
+									<span>Tu correo electrónico:</span>
+								</label>
+								<input type="email" id="email" name="email" required>
+								<strong><abbr title="required">*</abbr></strong>
+							</p>								
+						
+							<p>
+								<label for="aboutYou">
+									<span>Algo sobre ti:</span>
+								</label>
+								<textarea id="aboutYou" name="aboutYou"></textarea>
+							</p>
+							
+							<p>
+								<input type="checkbox" id="terms" name="terms" required>
+								<label for="terms">
+									<span>He leído y acepto los <a href="#">terminos</a> y <a href="#">condiciones de uso</a>.</span>
+								</label>
+							</p>
+						</div>
+						<div class="submit">
+							<input type="submit" value="Enviar">
+						</div>
+					</form>
+				</div>
+			</div>
+			
+		</main> 
+
+		<footer id="footer">
+		<div class="footerContainer">
+			<div class="directions">
+				<p><em>Casa de las cosas, Av. de la Reina Victoria, 19</em></p>
+				<p>email: <a href="contact@casacosas.com">contact@casacosas.com</a></p>
+				<p>Teléfono: +34 767 536 222</p>
+			</div>
+			
+			<div class="social">
+				<a href="#"><img src="images/fb.png" alt="fb"></a>
+				<a href="#"><img src="images/twitter.png" alt="twitter"></a>
+				<a href="#"><img src="images/instagram.png" alt="instagram"></a>
+			</div>
+		</div>
+		</footer>
+		
+	</body>
+</html>
