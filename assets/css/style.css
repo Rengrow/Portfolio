@@ -42,6 +42,14 @@ h1, h2, h3, h4, h5, h6, .font-heading {
   font-family: 'Staatliches', cursive;
 }
 
+table {
+  width: 80%;
+}
+
+table, tr, th, td {
+  border: 1px solid #000000;
+}
+
 #individualProject p {
   font-size: 1.15rem;
 }
